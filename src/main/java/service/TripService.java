@@ -1,8 +1,7 @@
 package service;
 
 import model.*;
-
-import java.util.Date;
+import util.Hour;
 
 /**
  * Setear un asset.
@@ -42,7 +41,7 @@ public class TripService {
 
     }
 
-    public void setTime(Date date){
+    public void setTime(Hour date){
 
         trip.setTripTime(date);
     }

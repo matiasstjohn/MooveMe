@@ -40,4 +40,7 @@ public class Scoring implements Entity {
         sortLeaderBoard(leaderBoard);
         return leaderBoard;
     }
+
+    public void addDiscount(Discount discount) {
+    }
 }

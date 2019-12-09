@@ -66,8 +66,8 @@ public class AdminService {
         return "Your Asset was not created";
     }
 
-    public Discount createDiscount(String assetType, Integer minScore, Zone zone, int percent) {
-        Discount discount = new Discount(assetType, minScore, zone, percent);
+    public Discount createDiscount(String assetType, int minScore, Zone zone, int percent) {
+        Discount discount = new Discount(assetType,minScore,zone,percent);
         discounts.add(discount);
         return discount;
     }
@@ -77,6 +77,10 @@ public class AdminService {
     }
 
     public PurchaseLot createPurchaseLot(KeyGenerator keyGenerator, Zone zone, String assetType) {
+        Long key = null;
+        Zone zone1 = null;
+        AssetType assetType1 = null;
+        int lot = 0;
         PurchaseLot purchaseLot = new PurchaseLot(keyGenerator, zone, assetType, key, zone1, assetType1, lot);
         purchaseLots.add(purchaseLot);
         return purchaseLot;
@@ -86,5 +90,8 @@ public class AdminService {
     }
 
     public void createPurchaseLot(Zone zone, AssetType type, Terminal terminal, int lot) {
+    }
+
+    public void createDiscount(int minScore, Zone zone, int percent) {
     }
 }

@@ -12,8 +12,14 @@ public class SignUpService {
 
     // Chequear que el nickname sea unico
 
-    public void signUp(String username, String password, String phoneNumber, String nickname) {
+    public void signUp(String username, String password, int phoneNumber, String nickname) {
         Client client = new Client(username, password, phoneNumber, nickname);
         signedUpClients.add(client);
+    }
+
+    public String signUp(String username, Integer phoneNumber) {
+    }
+
+    public String registerClient(String username, Integer phoneNumber, String nickname, String password) {
     }
 }

@@ -5,7 +5,7 @@ import java.util.List;
 
 public interface ClientI {
 
-    Integer getPhoneNumber();
+    int getPhoneNumber();
 
     String getNickname();
 

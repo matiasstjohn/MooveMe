@@ -23,13 +23,14 @@ public class Asset implements AssetI, Entity {
         this.purchaseLot = purchaseLot;
     }
 
+
     @Override
     public Long getKey() {
         return key;
     }
 
     @Override
-    public String getType() {
+    public AssetType getType() {
         return assetType;
     }
 

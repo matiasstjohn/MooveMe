@@ -19,6 +19,9 @@ import java.util.List;
 public class ScoringService {
     private Scoring scoring;
 
+    public ScoringService(Scoring scoring) {
+    }
+
 
     public Discount createDiscount(String assetType, Integer minScore, Zone zone, int percent) {
         Discount discount = new Discount(assetType, minScore, zone, percent);
@@ -52,5 +55,8 @@ public class ScoringService {
         if (date.after(date1)) {
             //scoring.getLeaderBoard().get(0).addDiscounts();
         }
+    }
+
+    public List<String> showLeaders() {
     }
 }

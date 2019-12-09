@@ -12,13 +12,14 @@ public class Discount implements Entity {
     private final Zone zone;
     private final int percent;
 
-    public Discount(String assetType, Integer minScore, Zone zone, int percent) {
+    public Discount(AssetType assetType, int minScore, Zone zone, int percent) {
         this.key = new KeyGenerator().generateKey();
         this.assetType = assetType;
         this.minScore = minScore;
         this.zone = zone;
         this.percent = percent;
     }
+
 
     @Override
     public Long getKey() {

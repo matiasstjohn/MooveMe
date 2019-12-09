@@ -163,7 +163,7 @@ public class AdminMenu {
 
         int percent = scanner.nextInt();
 
-        adminService.createDiscount(viewService.assetsList().get(asset).getType(), minScore,
+        adminService.createDiscount( minScore,
                 viewService.zonesList().get(zone), percent);
 
         adminMenu();

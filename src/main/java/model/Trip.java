@@ -1,6 +1,7 @@
 package model;
 
 import util.*;
+import util.Tariff;
 
 public class Trip implements TripI, Entity {
 
@@ -11,9 +12,10 @@ public class Trip implements TripI, Entity {
     private Hour tripTime;
     private Discount discount;
     private Terminal toHandOver;
-    private Tariff tariff;
+    private util.Tariff tariff;
     private Integer score;
     private TripState tripState;
+    private Terminal terminal;
 
     public Trip(Client client) {
         this.client = client;
@@ -52,9 +54,14 @@ public class Trip implements TripI, Entity {
     }
 
     @Override
-    public void setTariff(Tariff tariff) {
-        this.tariff = tariff;
+    public void setTariff(util.Tariff tariff) {
+        this.tariff=tariff;
     }
+
+    //@Override
+    //public void setTariff(Tariff tariff) {
+      //  this.tariff = tariff;
+    //}
 
     @Override
     public void setScore(Integer score) {
@@ -110,4 +117,6 @@ public class Trip implements TripI, Entity {
     public TripState getTripState() {
         return tripState;
     }
+
+    public void setTerminal(Terminal terminal) {this.terminal=terminal; }
 }

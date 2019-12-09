@@ -10,13 +10,9 @@ public class ClientRepository extends AbstractRepository<Client> implements User
     private static ClientRepository clientRepository;
 
     private ClientRepository() {
-        create(new Client("santi", "1234", 1130041854, "santi"));
-        create(new Client("agus", "1234", 1138081835, "agus"));
+        create(new Client("mati", "1234", 1130041854, "mati"));
 
-        Client client = (new Client("flor", "1234", 1143383000, "flor"));
-        client.sumScore(100);
-        create(client);
-        create(new Client("alex", "1234", 1143338542, "alex"));
+
     }
 
     @Override
@@ -44,7 +40,7 @@ public class ClientRepository extends AbstractRepository<Client> implements User
         List<Client> clients = findAll();
 
         for (Client client: clients) {
-            if ( client.getPhoneNumber().equals(phoneNumber)) return client;
+            if ( client.getPhoneNumber()==(phoneNumber)) return client;
         }
 
         return null;

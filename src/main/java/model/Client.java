@@ -6,7 +6,7 @@ import java.util.List;
 
 public class Client extends User implements ClientI {
 
-    private Integer phoneNumber;
+    private int phoneNumber;
     private String nickname;
     private Boolean isBlocked;
     private Integer accumulatedScore;
@@ -15,7 +15,7 @@ public class Client extends User implements ClientI {
     private List<Discount> discounts;
     private List<Voucher> vouchers;
 
-    public Client(String username, String password, Integer phoneNumber, String nickname) {
+    public Client(String username, String password, int phoneNumber, String nickname) {
         super(username, password);
         this.accumulatedScore = 0;
         this.scoreToUse = 0;
@@ -27,7 +27,7 @@ public class Client extends User implements ClientI {
     }
 
     @Override
-    public Integer getPhoneNumber() {
+    public int getPhoneNumber() {
         return phoneNumber;
     }
 
