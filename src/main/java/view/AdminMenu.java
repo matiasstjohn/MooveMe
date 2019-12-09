@@ -19,7 +19,7 @@ public class AdminMenu {
                 "4. Create terminal. \n" +
                 "5. Create purchase lot. \n" +
                 "6. Create discount. \n" +
-                "7. Exit.");
+                "7. Exit.\n");
 
         System.out.println("Please enter the option number you want: \n");
 

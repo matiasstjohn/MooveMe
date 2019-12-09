@@ -18,6 +18,13 @@ public class PurchaseLot implements Entity {
         this.lot = lot;
     }
 
+    public PurchaseLot(KeyGenerator keyGenerator, Zone zone, String assetType, Long key, Zone zone1, AssetType assetType1, int lot) {
+        this.key = key;
+        this.zone = zone1;
+        this.assetType = assetType1;
+        this.lot = lot;
+    }
+
     @Override
     public Long getKey() {
         return key;

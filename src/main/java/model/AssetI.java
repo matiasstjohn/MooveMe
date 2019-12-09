@@ -1,10 +1,8 @@
 package model;
 
-import util.AssetType;
-
 public interface AssetI {
 
-    AssetType getType();
+    String getType();
 
     PurchaseLot getLot();
 

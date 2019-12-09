@@ -1,6 +1,7 @@
 package service;
 
 import model.*;
+import util.AssetType;
 import util.KeyGenerator;
 import java.util.List;
 
@@ -76,8 +77,14 @@ public class AdminService {
     }
 
     public PurchaseLot createPurchaseLot(KeyGenerator keyGenerator, Zone zone, String assetType) {
-        PurchaseLot purchaseLot = new PurchaseLot(keyGenerator, zone, assetType);
+        PurchaseLot purchaseLot = new PurchaseLot(keyGenerator, zone, assetType, key, zone1, assetType1, lot);
         purchaseLots.add(purchaseLot);
         return purchaseLot;
+    }
+
+    public void reportTrip(Trip trip, Terminal terminal, int baseFine) {
+    }
+
+    public void createPurchaseLot(Zone zone, AssetType type, Terminal terminal, int lot) {
     }
 }

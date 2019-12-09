@@ -29,7 +29,7 @@ public class Asset implements AssetI, Entity {
     }
 
     @Override
-    public AssetType getType() {
+    public String getType() {
         return assetType;
     }
 
