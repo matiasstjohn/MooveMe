@@ -50,11 +50,11 @@ public class TerminalService {
         DateFormat dateFormat = new SimpleDateFormat("HH:mm:ss");
         Date date = new Date();
 
-        if (date.compareTo(trip.getTripTime()) <= 0) {
+        /*if (date.compareTo(trip.getTripTime()) <= 0) {
             return new Discount(trip.getAsset().getType(),
                     trip.getAsset().getMinScore(),
                     trip.getZone(), 20);
-        }
+        }*/
 
         return null;
     }

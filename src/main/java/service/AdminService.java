@@ -66,7 +66,7 @@ public class AdminService {
         return "Your Asset was not created";
     }
 
-    public Discount createDiscount(String assetType, int minScore, Zone zone, int percent) {
+    public Discount createDiscount(AssetType assetType, int minScore, Zone zone, int percent) {
         Discount discount = new Discount(assetType,minScore,zone,percent);
         discounts.add(discount);
         return discount;

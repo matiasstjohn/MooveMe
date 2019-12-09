@@ -18,8 +18,10 @@ public class SignUpService {
     }
 
     public String signUp(String username, Integer phoneNumber) {
+        return username;
     }
 
     public String registerClient(String username, Integer phoneNumber, String nickname, String password) {
+        return username;
     }
 }
