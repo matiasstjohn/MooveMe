@@ -1,14 +1,18 @@
 package model;
 
-import util.KeyGenerator;
+import util.AssetType;
 
 public interface AssetI {
-    KeyGenerator getKey();
-    Integer getMinScore();
-    Zone getZone();
-    String getType();
-    Discount getDiscount();
+
+    AssetType getType();
+
     PurchaseLot getLot();
-    Tariff getTariff();
-    void setPurchaseLot(PurchaseLot lot);
+
+    Zone getZone();
+
+    Terminal getTerminal();
+
+    Integer getMinScore();
+
+    void setTerminalToHandOver(Terminal terminal);
 }

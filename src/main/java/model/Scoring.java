@@ -1,25 +1,43 @@
 package model;
+
+import util.Entity;
+import util.KeyGenerator;
+import java.util.ArrayList;
 import java.util.List;
 
-public class Scoring {
-    private List<Client> leaderBoard;
-    private List<Discount> discounts;
-    private final Zone zone;
+public class Scoring implements Entity {
 
-    public Scoring(List<Client> leaderBoard, Zone zone) {
-        this.leaderBoard = leaderBoard;
+    private final Zone zone;
+    private final Long key;
+    private List<Client> leaderBoard;
+
+    public Scoring(Zone zone) {
         this.zone = zone;
+        this.key = new KeyGenerator().generateKey();
+        this.leaderBoard = new ArrayList<>();
+    }
+
+    @Override
+    public Long getKey() {
+        return key;
+    }
+
+    public Zone getZone() {
+        return zone;
+    }
+
+    public void addClients(Client client) {
+        if (client.hasZone(zone)) {
+            leaderBoard.add(client);
+        }
     }
 
     public void sortLeaderBoard(List<Client> clients) {
         clients.sort((Client a, Client b)-> b.getAccumulatedScore() - a.getAccumulatedScore());
     }
 
-    public void addDiscount(Discount discount) {
-        discounts.add(discount);
-    }
-
     public List<Client> getLeaderBoard() {
+        sortLeaderBoard(leaderBoard);
         return leaderBoard;
     }
 }
