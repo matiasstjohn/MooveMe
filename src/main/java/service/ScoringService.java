@@ -26,7 +26,6 @@ public class ScoringService {
         return discount;
     }
 
-    // En algun lado se tienen que separar listas de clientes por zona, los tableros son por zona.
 
     public List<String> showLeaders(List<Client> clients) {
 
@@ -45,8 +44,6 @@ public class ScoringService {
         return nicknames;
     }
 
-    // como sabe el metodo para que tipo y zona va a ser el descuento?
-    // el scoring tiene zona, entonces seria el mismo, pero tiene tipo de activo??
 
     public void rewardBestThree(Date date) {
         //Discount discount = new Discount();
